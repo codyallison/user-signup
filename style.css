@@ -1,0 +1,8 @@
+label {
+    float: left;
+    display: inline-block;
+}
+input {
+    float: right;
+    display: inline-block;
+}
