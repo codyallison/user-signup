@@ -20,7 +20,7 @@ def confirm():
     password_error =''
     verify_error = ''
     email_error = ''
-
+    email_list = list(email)
     if len(username) < 1:
         user_error = "Please enter a user name"
     elif len (username) <3 or len(username) >20:
@@ -35,7 +35,7 @@ def confirm():
         verify_error = "Please verify the password"
     if len(email) > 0 and len(email)<3 or len(email)>20:
         email_error = "Please enter an email between 3 and 20 characters"
-    elif "@" not in list(email) or "." not in list(email):
+    elif email_list.count("@") != 1 or email_list.count(".") != 1:
         email_error = "Please enter a valid email example@domain.com"
     elif " " in list(email):
         email_error = "Please enter a valid email example@domain.com"
