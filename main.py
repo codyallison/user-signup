@@ -29,7 +29,7 @@ def confirm():
     if len(password) <1:
         password_error = "Please enter a password"
     elif password != confpassword:
-        password_error = "Passwords do not match"
+        verify_error = "Passwords do not match"
 
     if len(confpassword)<1:
         verify_error = "Please verify the password"
